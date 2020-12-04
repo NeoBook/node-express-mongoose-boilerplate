@@ -213,7 +213,7 @@ const getUser = async (userId) => {
 
 ## Validation
 
-Request data is validated using [Joi](https://hapi.dev/family/joi/). Check the [documentation](https://hapi.dev/family/joi/api/) for more details on how to write Joi validation schemas.
+Request data is validated using [Joi](https://joi.dev/). Check the [documentation](https://joi.dev/api/) for more details on how to write Joi validation schemas.
 
 The validation schemas are defined in the `src/validations` directory and are used in the routes by providing them as parameters to the `validate` middleware.
 
@@ -278,12 +278,12 @@ If the user making the request does not have the required permissions to access 
 
 ## Logging
 
-Import the logger from `src/utils/logger.js`. It is using the [Winston](https://github.com/winstonjs/winston) logging library.
+Import the logger from `src/config/logger.js`. It is using the [Winston](https://github.com/winstonjs/winston) logging library.
 
 Logging should be done according to the following severity levels (ascending order from most important to least important):
 
 ```javascript
-const logger = require('<path to src>/utils/logger');
+const logger = require('<path to src>/config/logger');
 
 logger.error('message'); // level 0
 logger.warn('message'); // level 1
